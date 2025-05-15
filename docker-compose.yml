@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  socks5:
+    image: serjs/go-socks5-proxy
+    container_name: socks5
+    ports:
+      - "1090:9090"
+    environment:
+      - PROXY_PORT=9090
+      - PROXY_USER=${SOCKS5_USER}
+      - PROXY_PASSWORD=${SOCKS5_PASSWORD}
